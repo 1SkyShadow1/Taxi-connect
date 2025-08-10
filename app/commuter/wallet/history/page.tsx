@@ -184,12 +184,14 @@ export default function WalletHistoryPage() {
 
           {loading ? <div className='p-6 text-center text-sm text-gray-500'>Loading...</div> : filteredTransactions.length > 0 ? (
             <div className="divide-y divide-gray-100">
-              {filteredTransactions.map((transaction) => (
+              {filteredTransactions.map((transaction) => {
+                const tType = (transaction as any).type ?? (transaction as any).transaction_type;
+                return (
                 <div key={transaction.id} className="p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center ${getTransactionColor(transaction.type)}`}>
-                        <i className={`${getTransactionIcon(transaction.type)}`}></i>
+                      <div className={`w-10 h-10 rounded-full flex items-center justify-center ${getTransactionColor(tType)}`}>
+                        <i className={`${getTransactionIcon(tType)}`}></i>
                       </div>
                       <div className="flex-1">
                         <p className="font-medium text-gray-900">{transaction.description}</p>
@@ -231,7 +233,7 @@ export default function WalletHistoryPage() {
                     </div>
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           ) : (
             <div className="p-8 text-center">
