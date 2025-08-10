@@ -1,0 +1,7 @@
+{
+  "/commuter/profile/personal-info/page": "app/commuter/profile/personal-info/page.js",
+  "/commuter/page": "app/commuter/page.js",
+  "/auth/driver/page": "app/auth/driver/page.js",
+  "/auth/commuter/page": "app/auth/commuter/page.js",
+  "/page": "app/page.js"
+}
