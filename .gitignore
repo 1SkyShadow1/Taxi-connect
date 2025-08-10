@@ -2,7 +2,7 @@ node_modules
 # Dependencies
 pnpm-lock.yaml
 yarn.lock
-package-lock.json
+# package-lock.json REMOVED from ignore to ensure consistent installs
 
 # Env files
 .env
@@ -28,6 +28,11 @@ coverage
 
 # Typescript build cache
 *.tsbuildinfo
+
+# Lint / build caches
+.eslintcache
+.turbo
+.nyc_output
 
 # IDE / Editor
 .vscode/

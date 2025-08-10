@@ -165,7 +165,7 @@ export default function WalletPage() {
 
           <div className="divide-y divide-gray-100">
             {loading ? <div className='p-4 text-sm text-gray-500'>Loading...</div> : transactions.slice(0, 5).map((transaction) => {
-              const tType = (transaction as any).type ?? transaction.transaction_type; // backward compatibility
+              const tType = (transaction as any).type ?? transaction.transaction_type ?? 'unknown'; // backward compatibility
               return (
               <div key={transaction.id} className="p-4 hover:bg-gray-50 transition-colors">
                 <div className="flex items-center justify-between">
