@@ -20,7 +20,7 @@ async function callPayments(payload: any) {
 }
 
 export interface WalletSummary { balance: number; total_topups: number; total_spent: number; }
-export interface TransactionRow { id: string; user_id: string; wallet_id?: string; booking_id?: string; transaction_type: string; amount: number; description: string; payment_method?: string; reference_number?: string; status: string; created_at: string; // extended optional UI fields
+export interface TransactionRow { id: string; user_id: string; wallet_id?: string; booking_id?: string; transaction_type: string; amount: number; description: string; payment_method?: string; reference_number?: string; status: string; created_at: string; type?: string; // optional legacy alias
   driver?: string; method?: string; receipt?: string; date?: string; time?: string; }
 
 export async function getWallet() : Promise<WalletSummary | null> {

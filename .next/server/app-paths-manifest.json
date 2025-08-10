@@ -1,8 +1,7 @@
 {
-  "/page": "app/page.js",
+  "/auth/commuter/page": "app/auth/commuter/page.js",
   "/commuter/page": "app/commuter/page.js",
   "/commuter/profile/page": "app/commuter/profile/page.js",
-  "/commuter/trips/page": "app/commuter/trips/page.js",
-  "/auth/commuter/page": "app/auth/commuter/page.js",
-  "/commuter/wallet/page": "app/commuter/wallet/page.js"
+  "/commuter/wallet/page": "app/commuter/wallet/page.js",
+  "/commuter/trips/page": "app/commuter/trips/page.js"
 }
