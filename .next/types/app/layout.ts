@@ -1,4 +1,4 @@
-// File: C:\Users\proline\Desktop\EVANS\Taxi-connect\app\layout.tsx
+// File: C:\Users\Eazym\OneDrive\Documents\Taxi-connect\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

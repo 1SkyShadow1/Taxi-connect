@@ -164,17 +164,19 @@ export default function WalletPage() {
           </div>
 
           <div className="divide-y divide-gray-100">
-            {loading ? <div className='p-4 text-sm text-gray-500'>Loading...</div> : transactions.slice(0, 5).map((transaction) => (
+            {loading ? <div className='p-4 text-sm text-gray-500'>Loading...</div> : transactions.slice(0, 5).map((transaction) => {
+              const tType = (transaction as any).type ?? transaction.transaction_type; // backward compatibility
+              return (
               <div key={transaction.id} className="p-4 hover:bg-gray-50 transition-colors">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                      transaction.type === 'ride' ? 'bg-orange-100' :
-                      transaction.type === 'topup' ? 'bg-green-100' :
+                      tType === 'ride' ? 'bg-orange-100' :
+                      tType === 'topup' ? 'bg-green-100' :
                       'bg-blue-100'
                     }`}>
-                      <i className={`${transaction.type === 'ride' ? 'ri-taxi-line text-orange-600' :
-                        transaction.type === 'topup' ? 'ri-add-line text-green-600' :
+                      <i className={`${tType === 'ride' ? 'ri-taxi-line text-orange-600' :
+                        tType === 'topup' ? 'ri-add-line text-green-600' :
                         'ri-arrow-go-back-line text-blue-600'}`}></i>
                     </div>
                     <div className="flex-1">
@@ -212,7 +214,7 @@ export default function WalletPage() {
                   </div>
                 </div>
               </div>
-            ))}
+            )})}
             {!loading && transactions.length === 0 && <div className='p-6 text-center text-sm text-gray-500'>No transactions yet.</div>}
           </div>
         </div>

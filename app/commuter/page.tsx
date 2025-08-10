@@ -32,7 +32,7 @@ export default function CommuterPage() {
       <header className="fixed top-0 w-full bg-white shadow-sm z-50">
         <div className="px-4 py-3 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <i className="ri-arrow-left-line text-gray-600 text-xl"></i>
+            <img src="/Logo.png" alt="SA Taxi Connect Logo" className="w-8 h-8 rounded-lg object-contain" />
             <span className="font-pacifico text-lg text-orange-600">SA Taxi Connect</span>
           </Link>
           <div className="flex items-center space-x-3">

@@ -12,10 +12,10 @@ export default function Home() {
       <header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-5xl mx-auto px-5 py-3 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center shadow-sm">
-              <i className="ri-taxi-line text-white text-xl"></i>
-            </div>
-            <span className="font-pacifico text-2xl bg-gradient-to-r from-primary-600 to-orange-500 bg-clip-text text-transparent">SA Taxi Connect</span>
+            <Link href="/" className="flex items-center space-x-2">
+              <img src="/Logo.png" alt="SA Taxi Connect Logo" className="h-9 w-9 rounded-xl object-contain shadow-sm" />
+              <span className="font-pacifico text-2xl bg-gradient-to-r from-primary-600 to-orange-500 bg-clip-text text-transparent">SA Taxi Connect</span>
+            </Link>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm font-medium">
             <a href="#features" className="hover:text-primary-600 transition-colors">Features</a>
@@ -184,7 +184,10 @@ export default function Home() {
       <footer className="px-5 py-10 bg-gray-900 text-gray-300">
         <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-10 text-sm">
           <div className="col-span-2">
-            <p className="font-pacifico text-xl text-white mb-3">SA Taxi Connect</p>
+            <div className="flex items-center space-x-2 mb-3">
+              <img src="/Logo.png" alt="SA Taxi Connect Logo" className="h-8 w-8 rounded-lg object-contain" />
+              <p className="font-pacifico text-xl text-white">SA Taxi Connect</p>
+            </div>
             <p className="text-gray-400 mb-4">Empowering commuters & drivers through transparent, location-aware mobility.</p>
             <p className="text-xs text-gray-500">© {new Date().getFullYear()} SA Taxi Connect. All rights reserved.</p>
           </div>

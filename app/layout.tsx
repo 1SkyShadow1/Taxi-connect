@@ -23,7 +23,23 @@ export const metadata: Metadata = {
   title: "SA Taxi Connect",
   description: "Real-time South African taxi booking & driver platform",
   manifest: '/manifest.webmanifest',
-  themeColor: '#f97316'
+  themeColor: '#f97316',
+  icons: {
+    icon: '/Logo.png',
+    shortcut: '/Logo.png',
+    apple: '/Logo.png'
+  },
+  openGraph: {
+    title: 'SA Taxi Connect',
+    description: 'Real-time South African taxi booking & driver platform',
+    images: ['/Logo.png']
+  },
+  twitter: {
+    card: 'summary',
+    title: 'SA Taxi Connect',
+    description: 'Real-time South African taxi booking & driver platform',
+    images: ['/Logo.png']
+  }
 };
 
 export default function RootLayout({
@@ -36,6 +52,8 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#f97316" />
+        <link rel="icon" href="/Logo.png" />
+        <link rel="apple-touch-icon" href="/Logo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
